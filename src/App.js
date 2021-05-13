@@ -6,23 +6,17 @@ import main3 from "./Assets/main3.jpeg";
 import main4 from "./Assets/main4.jpeg";
 import { useState } from "react";
 
-function App(props) {
-
+function App() {
+  const [images,setImages] = useState([main1,main2,main4])
   const [bigImage,setBigImage] = useState(main1)
-  const [firstSmall,setFirstSmall] = useState(main3)
-  const [secondSmall,setSecondSmall] = useState(main2)
-  const [thirdSmall,setThirdSmall] = useState(main4)
 
   const swapImage = (id)=>{
-     if(id===1){
-      setBigImage(main3)
-      setFirstSmall(bigImage)
-     }else if(id===2){
+     if(id===0){
+      setBigImage(main1)
+     }else if(id===1){
       setBigImage(main2)
-      setSecondSmall(bigImage)
-     }else if(id===3){
+     }else if(id===2){
       setBigImage(main4)
-      setThirdSmall(bigImage)
      }
   }
 
@@ -30,9 +24,7 @@ function App(props) {
     <div className="App">
       <div className="upper">
         <div className="upperLeft">
-          <img onClick={()=>swapImage(1)} className="smallImg" src={firstSmall}></img>
-          <img onClick={()=>swapImage(2)} className="smallImg" src={secondSmall}></img>
-          <img onClick={()=>swapImage(3)} className="smallImg" src={thirdSmall}></img>
+          {images.map((item, index)=><img onClick={()=>swapImage(index)} className="smallImg" src={item} />)}
         </div>
         <div className="upperRight">
           <MainPic image={bigImage} />
@@ -52,3 +44,4 @@ function App(props) {
 }
 
 export default App;
+
