@@ -14,7 +14,16 @@ function App(props) {
   const [thirdSmall,setThirdSmall] = useState(main4)
 
   const swapImage = (id)=>{
-     id && id===1?setBigImage(main3) :id===2?setBigImage(main2):id===3?setBigImage(main4):setBigImage(main1)
+     if(id===1){
+      setBigImage(main3)
+      setFirstSmall(bigImage)
+     }else if(id===2){
+      setBigImage(main2)
+      setSecondSmall(bigImage)
+     }else if(id===3){
+      setBigImage(main4)
+      setThirdSmall(bigImage)
+     }
   }
 
   return (
