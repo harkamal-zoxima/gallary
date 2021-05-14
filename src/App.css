@@ -8,6 +8,10 @@
   margin-top: 6%;
 }
 
+#portal{
+    background-color: rgba(0,0,0,0.5);
+}
+
 .upper {
   display: flex;
 }
@@ -40,6 +44,11 @@
   margin-top: 18px;
   border-radius: 10px;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  transition: transform 0.4s;
+}
+
+.largeImg:hover{
+  transform: scale(1.2);
 }
 
 .bottomDiv {

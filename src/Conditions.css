@@ -1,0 +1,29 @@
+
+.outermostDiv{
+    position: fixed;
+    top: 80%;
+    left: 50%;
+    transform: translate(-50% , -50%);
+    z-index: 1000;
+    /* background-color: rgba(0,0,0,0.5); */
+}
+
+@media (max-width:1450px){
+    .outermostDiv{
+        left: 84%;
+        
+    }
+}
+@media (max-width:950px){
+    .outermostDiv{
+        left: 84%;
+        top: 70%;
+    }
+}
+
+@media (max-width:390px){
+    .outermostDiv{
+        left: 48%;
+        top: 63%;
+    }
+}
